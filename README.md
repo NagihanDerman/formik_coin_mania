@@ -25,4 +25,4 @@ Yup est une bibliothèque de validation de schéma d'objet JavaScript. Il est ut
 
 ### GIF
 
-<img src=""/>
+<img src="./public/coinmania.gif"/>
