@@ -3,7 +3,7 @@ import * as yup from "yup";
 // validasyon şeması
 // inputlardaki değerlerin geçerli olabilmesi için gerekli olan koşulları ifade eder
 
-// metin içerisnde en az
+// metin içerisinde en az
 // 1 büyük harf
 // 1 küçük harf
 // 1 rakam
@@ -11,7 +11,7 @@ import * as yup from "yup";
 const regex = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{5,}$";
 
 const schema = yup.object().shape({
-  // shape içerisnde bir alan ismi ve o alanın geçerli olması için gerekli olan koşulları tanımlanmalı
+  // shape içerisinde bir alan ismi ve o alanın geçerli olması için gerekli olan koşulları tanımlanmalı
 
   // email alanının geçerli olması için gerekli koşullarasd
   email: yup
@@ -35,8 +35,7 @@ const schema = yup.object().shape({
     .required("Şifre zorunlu bir alan"),
 
   // şifre onay alanının geçerli olması için gerekli koşullar
-  // oneOf(): kontrol ettiğimiz inputtaki verinin dizi içerisndeki değerlerden biriyle aynı olmasını kontrol eder
-  // ref(): farklı bir inputtaki veriyi çağırmamızı sağlar
+
   passwordConfirm: yup
     .string()
     .oneOf([yup.ref("password")], "Doğrulama şifreniz asıl şifreyle eşleşmiyor")
